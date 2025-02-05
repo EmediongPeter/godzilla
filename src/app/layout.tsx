@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Godzilla - Meet Godzicoin $GODZ",
-  description: "Godzicoin ($GODZ) isn’t just a token—it’s the cutest, most degen-friendly baby in the Solana ecosystem. Built for meme lords, alphas, and Web3 chads, $GODZ blends top-tier meme culture with real utility, staking rewards, and community governance. Join the cutest movement on Solana!",
+  description:
+    "Godzicoin ($GODZ) isn’t just a token—it’s the cutest, most degen-friendly baby in the Solana ecosystem. Built for meme lords, alphas, and Web3 chads, $GODZ blends top-tier meme culture with real utility, staking rewards, and community governance. Join the cutest movement on Solana!",
   icons: {
     icon: "/favicon.png", // Path to your favicon
     shortcut: "/godz_transparent.png",
@@ -30,6 +32,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+      </Head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

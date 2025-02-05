@@ -61,7 +61,7 @@ export default function HeroSection() {
           <Image
             src="/godz_transparent.png"
             alt="$GODZ"
-            width={400} // Define width
+            width={600} // Define width
             height={600} // Define height to match original behavior
             className="relative z-10 animate-bounce drop-shadow-2xl"
           />
