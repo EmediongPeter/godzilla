@@ -68,7 +68,7 @@ export default async function TokenStats() {
 
   return (
     <div className="px-4 py-12 md:px-6 lg:px-8 bg-black/40">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <StatCard title="Live Price" value={`$${tokenData.price.toFixed(4)}`} icon={TrendingUp} change={2.5} />
           <StatCard title="Number of Holders" value={tokenData.holders.toLocaleString()} icon={Users} />
