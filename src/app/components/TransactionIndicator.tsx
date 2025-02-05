@@ -58,6 +58,7 @@ const TransactionPopup = ({
   );
 };
 
+// @ts-nocheck
 const GodzillaAnimation = React.memo(() => (
   <motion.div
     initial={{ scale: 0, opacity: 0 }}

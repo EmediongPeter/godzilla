@@ -1,3 +1,4 @@
+import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
 import TokenStats from "./components/LiveData";
 import TransactionIndicator from "./components/TransactionIndicator";
@@ -19,7 +20,8 @@ export default function Home() {
         <section>
           <TokenStats />
         </section>
-        <section className="z-50 relative">
+        <AboutSection /> Add the new AboutSection
+        <section className="relative">
           <TransactionIndicator />
         </section>
       </div>

@@ -1,9 +1,8 @@
 import React from "react";
 import * as motion from "motion/react-client";
+import Image from "next/image"
 
-type Props = {};
-
-export default function HeroSection({}: Props) {
+export default function HeroSection() {
   return (
     <section className="relative h-screen bg-gradient-to-b from-black via-zinc-950 to-black overflow-hidden pt-0 z-10">
       {/* Enhanced gradient overlay */}
@@ -56,14 +55,18 @@ export default function HeroSection({}: Props) {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="relative group"
+          className="relative group pt-20"
         >
           <div className="absolute inset-0 blur-3xl bg-gradient-to-tr from-[#43e97b]/20 to-[#38f9d7]/20 group-hover:from-[#43e97b]/30 group-hover:to-[#38f9d7]/30 transition-all duration-300" />
           <img
             src="/godz_transparent.png"
             alt="$GODZ"
-            className="h-[400px] relative z-10 animate-bouncee drop-shadow-2xl"
+            className="h-[400px] relative z-10 animate-bounce drop-shadow-2xl"
           />
+
+          {/* <Image 
+          src="/godz_transparent.png"
+          /> */}
         </motion.div>
       </div>
     </section>

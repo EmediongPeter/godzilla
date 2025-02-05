@@ -2,7 +2,7 @@ import { TrendingUp, Users, BarChart2, Wallet, Lock, LucideIcon } from "lucide-r
 
 type Props = {
   title: string;
-  value: any;
+  value: string | number;
   icon: LucideIcon;
   change?: number;
 };
