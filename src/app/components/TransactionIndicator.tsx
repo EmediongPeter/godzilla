@@ -7,7 +7,7 @@ export type Transaction = {
   amount: number;
   type: "buy" | "sell";
   timestamp: number;
-  position?: {
+  position: {
     x: number;
     y: number;
   };

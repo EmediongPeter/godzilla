@@ -1,6 +1,6 @@
 import { Transaction } from "@/app/components/TransactionIndicator";
 
-const indicator_transactions: Transaction[] = [
+const indicator_transactions: Omit<Transaction, "position">[] = [
     { id: "tx_001", amount: 0.2, type: "buy", timestamp: 1707081600000 },  // Small buy
     { id: "tx_002", amount: 1.5, type: "buy", timestamp: 1707081700000 },  // Large buy (Godzilla trigger)
     { id: "tx_003", amount: 0.8, type: "sell", timestamp: 1707081800000 }, // Small sell
