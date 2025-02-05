@@ -58,7 +58,6 @@ const TransactionPopup = ({
   );
 };
 
-// @ts-nocheck
 const GodzillaAnimation = React.memo(() => (
   <motion.div
     initial={{ scale: 0, opacity: 0 }}
@@ -80,6 +79,10 @@ const GodzillaAnimation = React.memo(() => (
     />
   </motion.div>
 ));
+
+
+// Add display name explicitly
+GodzillaAnimation.displayName = "GodzillaAnimation";
 
 // Generate a random position within viewport bounds
 const generateRandomPosition = () => {

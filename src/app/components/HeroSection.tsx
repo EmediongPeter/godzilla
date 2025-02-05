@@ -1,6 +1,6 @@
 import React from "react";
 import * as motion from "motion/react-client";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -31,7 +31,7 @@ export default function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            Powering the Oilconomy:
+            Baby Godzilla
           </motion.h1>
           <motion.h1
             className="text-4xl font-bold md:text-6xl text-zinc-100"
@@ -39,7 +39,7 @@ export default function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            CRUDO Protocol
+            The cutest Baby Godzilla memecoin on Solana
           </motion.h1>
           <motion.button
             className="mt-8 rounded-full bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3 font-medium text-zinc-950 hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20"
@@ -58,15 +58,14 @@ export default function HeroSection() {
           className="relative group pt-20"
         >
           <div className="absolute inset-0 blur-3xl bg-gradient-to-tr from-[#43e97b]/20 to-[#38f9d7]/20 group-hover:from-[#43e97b]/30 group-hover:to-[#38f9d7]/30 transition-all duration-300" />
-          <img
+          <Image
             src="/godz_transparent.png"
             alt="$GODZ"
-            className="h-[400px] relative z-10 animate-bounce drop-shadow-2xl"
+            width={400} // Define width
+            height={600} // Define height to match original behavior
+            className="relative z-10 animate-bounce drop-shadow-2xl"
           />
 
-          {/* <Image 
-          src="/godz_transparent.png"
-          /> */}
         </motion.div>
       </div>
     </section>
