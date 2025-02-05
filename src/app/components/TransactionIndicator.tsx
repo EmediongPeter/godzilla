@@ -2,12 +2,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-type Transaction = {
+export type Transaction = {
   id: string;
   amount: number;
   type: "buy" | "sell";
   timestamp: number;
-  position: {
+  position?: {
     x: number;
     y: number;
   };
