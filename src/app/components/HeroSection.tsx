@@ -93,8 +93,8 @@ export default function HeroSection() {
             <Image
               src="/godz_transparent.png"
               alt="$GODZ"
-              width={300} // Define width
-              height={300} // Define height to match original behavior
+              width={400} // Define width
+              height={400} // Define height to match original behavior
               className="relative z-10 drop-shadow-2xl"
             />
           </motion.div>

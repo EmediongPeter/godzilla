@@ -79,7 +79,7 @@ export default async function TokenStats() {
   const tokenData = await fetchTokenData(); // Fetch on the server
 
   return (
-    <div className="p-4 bg-black/20">
+    <div className="p-4 bg-black/20 rounded-lg">
       <div className="mx-auto">
         <motion.div
           className="grid grid-cols-2 gap-4 w-full max-w-lg"

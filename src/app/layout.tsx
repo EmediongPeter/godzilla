@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,8 @@ export default function RootLayout({
           <div className="absolute inset-0 opacity-[0.015] bg-[url('/noise.png')] mix-blend-overlay" />
           <div className="relative z-10">{children}</div>
         </div>
+
+        <Footer />
       </body>
     </html>
   );
