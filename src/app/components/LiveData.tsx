@@ -1,5 +1,11 @@
-import { TrendingUp, Users, BarChart2, Wallet, Lock, LucideIcon } from "lucide-react";
-
+import {
+  TrendingUp,
+  Users,
+  BarChart2,
+  Wallet,
+  LucideIcon,
+} from "lucide-react";
+import * as motion from "motion/react-client";
 type Props = {
   title: string;
   value: string | number;
@@ -8,24 +14,30 @@ type Props = {
 };
 
 const StatCard = ({ title, value, icon: Icon, change }: Props) => (
-  <div className="relative overflow-hidden rounded-2xl bg-zinc-900/80 p-6 backdrop-blur-xl border border-zinc-800/50 group hover:border-[#43e97b]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#43e97b]/10">
+  <div className="relative overflow-hidden rounded-2xl bg-zinc-900/80 p-2 backdrop-blur-xl border border-zinc-800/50 group hover:border-[#43e97b]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#43e97b]/10">
     <div className="absolute inset-0 bg-gradient-to-tr from-[#43e97b]/5 to-[#38f9d7]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="flex items-center justify-between">
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <Icon className="h-5 w-5 bg-gradient-to-r from-[#43e97b] to-[#38f9d7] rounded-lg p-1 text-black" />
-          <p className="text-zinc-400 text-sm font-medium">{title}</p>
+          <p className="text-zinc-400 text-xs font-medium">{title}</p>
         </div>
         <div>
-          <p className="text-3xl font-bold bg-gradient-to-r from-[#43e97b] to-[#38f9d7] bg-clip-text text-transparent">
+          <p className="text-2xl font-bold bg-gradient-to-r from-[#43e97b] to-[#38f9d7] bg-clip-text text-transparent">
             {value}
           </p>
           {change !== undefined && (
             <div className="flex items-center gap-1 mt-2">
               <TrendingUp
-                className={`h-4 w-4 ${change > 0 ? "text-[#43e97b]" : "text-red-500"}`}
+                className={`h-4 w-4 ${
+                  change > 0 ? "text-[#43e97b]" : "text-red-500"
+                }`}
               />
-              <p className={`text-sm font-bold ${change > 0 ? "text-[#43e97b]" : "text-red-500"}`}>
+              <p
+                className={`text-sm font-bold ${
+                  change > 0 ? "text-[#43e97b]" : "text-red-500"
+                }`}
+              >
                 {change > 0 ? "+" : ""}
                 {change}%
               </p>
@@ -50,7 +62,7 @@ async function fetchTokenData(): Promise<Stats> {
     // Example API Fetching
     // const response = await fetch("https://api.example.com/token");
     // const data = await response.json();
-    
+
     return {
       price: 173.4,
       holders: 4533,
@@ -67,15 +79,38 @@ export default async function TokenStats() {
   const tokenData = await fetchTokenData(); // Fetch on the server
 
   return (
-    <div className="px-4 py-12 md:px-6 lg:px-8 bg-black/40">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <StatCard title="Live Price" value={`$${tokenData.price.toFixed(4)}`} icon={TrendingUp} change={2.5} />
-          <StatCard title="Number of Holders" value={tokenData.holders.toLocaleString()} icon={Users} />
-          <StatCard title="Market Cap" value={`$${(tokenData.marketCap / 1_000_000).toFixed(2)}M`} icon={BarChart2} />
-          <StatCard title="24h Volume" value={`$${(tokenData.volume / 1_000).toFixed(2)}K`} icon={Wallet} change={-1.2} />
-          <StatCard title="Total Staked" value="Coming Soon" icon={Lock} />
-        </div>
+    <div className="p-4 bg-black/20">
+      <div className="mx-auto">
+        <motion.div
+          className="grid grid-cols-2 gap-4 w-full max-w-lg"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <StatCard
+            title="Live Price"
+            value={`$${tokenData.price.toFixed(4)}`}
+            icon={TrendingUp}
+            change={2.5}
+          />
+          <StatCard
+            title="Number of Holders"
+            value={tokenData.holders.toLocaleString()}
+            icon={Users}
+          />
+          <StatCard
+            title="Market Cap"
+            value={`$${(tokenData.marketCap / 1_000_000).toFixed(2)}M`}
+            icon={BarChart2}
+          />
+          <StatCard
+            title="24h Volume"
+            value={`$${(tokenData.volume / 1_000).toFixed(2)}K`}
+            icon={Wallet}
+            change={-1.2}
+          />
+          {/* <StatCard title="Total Staked" value="Coming Soon" icon={Lock} /> */}
+        </motion.div>
       </div>
     </div>
   );

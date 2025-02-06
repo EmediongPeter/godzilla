@@ -1,7 +1,5 @@
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
-import TokenStats from "./components/LiveData";
-import TransactionIndicator from "./components/TransactionIndicator";
 
 export default function Home() {
   return (
@@ -13,16 +11,16 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="z-10">
         <h1 className="sr-only">Hello World</h1>{" "}
         {/* Hidden for accessibility */}
         <HeroSection />
-        <section>
-          <TokenStats />
-        </section>
+        {/* <section className="h-screen">
+          {/* <TokenStats />
+        </section> */}
         <AboutSection /> Add the new AboutSection
-        <section className="relative">
-          <TransactionIndicator />
+        <section className="">
+          {/* <TransactionIndicator /> */}
         </section>
       </div>
     </div>
