@@ -18,7 +18,7 @@ const LaunchPage = memo(() => {
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Get ready for the cutest and most explosive memecoin launch on
-            Solana. Don't miss out on your chance to join the $GODZ movement!
+            Solana. Don&apos;t miss out on your chance to join the $GODZ movement!
           </p>
         </div>
 
@@ -77,5 +77,7 @@ const LaunchPage = memo(() => {
     </div>
   );
 });
+
+LaunchPage.displayName = "LaunchPage"
 
 export default LaunchPage;

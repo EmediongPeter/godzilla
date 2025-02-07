@@ -180,9 +180,9 @@ export default function HeroSection() {
             >
               The cutest Baby Godzilla memecoin on Solana
             </motion.h1>
-            <div className="flex gap-3">
+            <div className="flex gap-3 w-full flex-1">
               <motion.button
-                className="mt-8 rounded-full bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3 font-medium text-zinc-950 hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20 text-sm"
+                className="mt-8 rounded-full bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3 font-medium text-zinc-950 hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20 text-sm w-full"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -193,9 +193,10 @@ export default function HeroSection() {
                 href="https://godz-godzicoin.gitbook.io/godzicoin-usdgodz-litepaper"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full"
               >
                 <motion.button
-                  className="mt-8 rounded-full hover:bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3  hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20 uppercase text-white bg-black/20 font-bold "
+                  className="mt-8 rounded-full hover:bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3  hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20 uppercase text-white bg-black/20 font-bold w-full"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
@@ -208,11 +209,14 @@ export default function HeroSection() {
 
           <div className="flex-col">
             <div className="md:hidden flex-row gap-3">
+              <div className="md:hidden w-[300px] mx-auto">
+                <TransactionIndicator />
+              </div>
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="relative group pt-20"
+                className="relative group pt-10 md:pt-20"
               >
                 <div className="absolute inset-0 blur-3xl bg-gradient-to-tr from-[#43e97b]/20 to-[#38f9d7]/20 group-hover:from-[#43e97b]/30 group-hover:to-[#38f9d7]/30 transition-all duration-300" />
                 <Image
@@ -246,7 +250,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        <div className="z-[999] sm:w-fit w-[300px] mt-5">
+        <div className="z-[999] sm:w-fit w-[300px] mt-5 hidden md:block">
           <TransactionIndicator />
         </div>
       </div>

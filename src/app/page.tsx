@@ -24,17 +24,21 @@ export default function Home() {
         </Suspense>
 
         <Suspense fallback={<div>Loading About...</div>}>
-          <AboutSection />
+          <section id="about">
+            <AboutSection />
+          </section>
         </Suspense>
 
         <Suspense fallback={<div>Loading Roadmap...</div>}>
-          <section>
+          <section id="roadmap">
             <Roadmap />
           </section>
         </Suspense>
 
         <Suspense fallback={<div>Loading Launch...</div>}>
-          <LaunchPage />
+          <section id="token">
+            <LaunchPage />
+          </section>
         </Suspense>
       </div>
     </div>
