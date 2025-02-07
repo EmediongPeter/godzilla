@@ -246,7 +246,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        <div className="z-[999]">
+        <div className="z-[999] sm:w-fit w-[300px] mt-5">
           <TransactionIndicator />
         </div>
       </div>

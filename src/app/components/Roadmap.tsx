@@ -98,12 +98,12 @@ export default function Roadmap() {
     <section className="relative bg-gradient-to-b from-black via-zinc-950 to-black overflow-hidden py-16 px-4 md:px-8">
       {/* Background gradient effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(67,233,123,0.15)_0%,rgba(0,0,0,0.95)_100%)] animate-gradient-scale" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(67,233,123,0.1)_0%,rgba(0,0,0,0.95)_100%)] animate-gradient-rotate" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(67,233,123,0.50)_0%,rgba(0,0,0,0.95)_100%)] animate-gradient-scale" />
+        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(67,233,123,0.1)_0%,rgba(0,0,0,0.95)_100%)] animate-gradient-rotate" /> */}
       </div>
 
       {/* Noise texture */}
-      <div className="absolute inset-0 opacity-[0.015] bg-[url('/noise.png')] mix-blend-overlay" />
+      {/* <div className="absolute inset-0 opacity-[0.015] bg-[url('/noise.png')] mix-blend-overlay" /> */}
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <motion.h2

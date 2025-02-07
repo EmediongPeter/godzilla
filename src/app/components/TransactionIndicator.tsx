@@ -20,7 +20,7 @@ const TransactionList = React.memo(({ transactions }: { transactions: Transactio
   return (
     <div className="z-[9999]">
       <div className="bg-gradient-to-br from-[#43e97b] to-[#38f9d7] p-1 rounded-2xl shadow-xl">
-        <div className="bg-zinc-900/90 backdrop-blur-lg rounded-xl p-3 space-y-3 min-w-[110px]">
+        <div className="bg-zinc-900/90 backdrop-blur-lg rounded-xl p-3 space-y-3 w-full">
           <h3 className="text-[#43e97b] font-semibold text-base mb-2">Tokens</h3>
           {transactions.map((transaction) => (
             <div
