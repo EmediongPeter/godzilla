@@ -131,7 +131,7 @@ export default function Roadmap() {
         >
           Cuteness and alpha energy at full force.
           <br />
-          Join $GODZ and let's create history together 🚀
+          Join $GODZ and let&apos;s create history together 🚀
         </motion.div>
       </div>
     </section>
