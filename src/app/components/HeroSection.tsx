@@ -60,19 +60,17 @@ export default function HeroSection() {
               </motion.button>
               <Link
                 href="/https://godz-godzicoin.gitbook.io/godzicoin-usdgodz-litepaper"
-                passHref
-                legacyBehavior
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a target="_blank" rel="noopener noreferrer">
-                  <motion.button
-                    className="mt-8 rounded-full hover:bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3  hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20 uppercase text-white bg-black/20 font-bold "
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                  >
-                    Whitepaper
-                  </motion.button>
-                </a>
+                <motion.button
+                  className="mt-8 rounded-full hover:bg-gradient-to-r from-[#43e97b] to-[#38f9d7] px-6 py-3  hover:brightness-110 transition-all shadow-lg shadow-[#43e97b]/20 uppercase text-white bg-black/20 font-bold "
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  Whitepaper
+                </motion.button>
               </Link>
             </div>
           </div>
