@@ -55,30 +55,32 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 place-contento">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-zinc-900/50 backdrop-blur-lg rounded-2xl p-8 border border-[#43e97b]/20 hover:border-[#43e97b]/40 transition-all duration-300 w-3/4"
-            >
-              <div className="flex items-start gap-6">
-                <div className="p-3 bg-zinc-800/50 rounded-xl">
-                  {feature.icon}
+        <div className="flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 w-full max-w-5xl px-4">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zinc-900/50 backdrop-blur-lg rounded-2xl p-6 border border-[#43e97b]/20 hover:border-[#43e97b]/40 transition-all duration-300 w-full max-w-md mx-auto"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="p-3 bg-zinc-800/50 rounded-xl">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-400 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}

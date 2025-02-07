@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { X, Send } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function Navbar() {
   return (

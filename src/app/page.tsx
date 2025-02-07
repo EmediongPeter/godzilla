@@ -1,5 +1,6 @@
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
+import Roadmap from "./components/Roadmap";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
         </section> */}
         <AboutSection /> Add the new AboutSection
         <section className="">
-          {/* <TransactionIndicator /> */}
+          <Roadmap />
         </section>
       </div>
     </div>
