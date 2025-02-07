@@ -27,7 +27,7 @@ const RoadmapItem = ({
       }}
       viewport={{ once: true }}
     >
-      <div className="absolute -left-[calc(1px)] top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#43e97b] to-[#38f9d7] opacity-30 group-hover:opacity-100 transition-all duration-300" />
+      <div className="absolute -left-[calc(1px)] top-6 bottom-0 w-0.5 bg-gradient-to-b from-[#43e97b] to-[#38f9d7] opacity-30 group-hover:opacity-100 transition-all duration-300" />
 
       <div
         className={`
@@ -41,7 +41,7 @@ const RoadmapItem = ({
       `}
       >
         <div
-          className="absolute -left-[22px] top-2 w-5 h-5 rounded-full 
+          className="absolute -left-[35px] top-1 w-5 h-5 rounded-full 
           bg-gradient-to-r from-[#43e97b] to-[#38f9d7] 
           group-hover:scale-110 transition-transform duration-300"
         />
