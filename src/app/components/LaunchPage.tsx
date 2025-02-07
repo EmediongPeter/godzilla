@@ -1,24 +1,23 @@
 import React, { memo } from "react";
-import * as motion from "motion/react-client"
+import * as motion from "motion/react-client";
+import { ExternalLink } from "lucide-react";
 
 const LaunchPage = memo(() => {
   return (
-      <div className="min-h-screen bg-[#0A0A0A] text-white flex items-center justify-center p-4">
-          {/* <div className="w-full min-h-screen bg-black relative overflow-hidden py-20"> */}
+    <div className="min-h-screen bg-[#0A0A0A] text-white flex items-center justify-center p-4">
+      {/* <div className="w-full min-h-screen bg-black relative overflow-hidden py-20"> */}
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(67,233,123,0.15)_0%,rgba(0,0,0,0.95)_100%)]" />
       <div className="max-w-4xl w-full bg-[#121212] border border-[#2CFF87]/20 rounded-2xl overflow-hidden shadow-2xl z-[999] relative">
-        
         {/* Header Section */}
         <div className="bg-gradient-to-r from-[#0A2E2C] to-[#0A2E2C]/80 p-8 text-center">
-          <h1
-            className="text-4xl md:text-5xl font-bold text-[#2CFF87] mb-4"
-          >
+          <h1 className="text-4xl md:text-5xl font-bold text-[#2CFF87] mb-4">
             Launching Soon on Pump.Fun
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Get ready for the cutest and most explosive memecoin launch on
-            Solana. Don&apos;t miss out on your chance to join the $GODZ movement!
+            Solana. Don&apos;t miss out on your chance to join the $GODZ
+            movement!
           </p>
         </div>
 
@@ -66,11 +65,11 @@ const LaunchPage = memo(() => {
             href="https://pump.fun"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-[#2CFF87] to-[#00D1FF] text-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition-all"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#2CFF87] to-[#00D1FF] text-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Visit Pump.Fun
+            Visit Pump.Fun <ExternalLink className="w-5 h-5" />
           </motion.a>
         </div>
       </div>
@@ -78,6 +77,6 @@ const LaunchPage = memo(() => {
   );
 });
 
-LaunchPage.displayName = "LaunchPage"
+LaunchPage.displayName = "LaunchPage";
 
 export default LaunchPage;

@@ -2,6 +2,7 @@ import React from "react";
 // import { motion } from 'framer-motion';
 import * as motion from "motion/react-client";
 import { Rocket, Shield, Users, Coins } from "lucide-react";
+import Link from "next/link";
 
 const AboutSection = () => {
   const features = [
@@ -84,16 +85,18 @@ const AboutSection = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-20"
-        >
-          <button className="bg-gradient-to-r from-[#43e97b] to-[#38f9d7] text-black font-bold py-4 px-8 rounded-full hover:scale-105 transition-transform duration-300">
-            Join the Kawaii Revolution
-          </button>
-        </motion.div>
+        <Link href="https://t.me/GodzOnSol" target="_blank">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center mt-20"
+          >
+            <button className="bg-gradient-to-r from-[#43e97b] to-[#38f9d7] text-black font-bold py-4 px-8 rounded-full hover:scale-105 transition-transform duration-300">
+              Join the Kawaii Revolution
+            </button>
+          </motion.div>
+        </Link>
       </div>
     </div>
   );
