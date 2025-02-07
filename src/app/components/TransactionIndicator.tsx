@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 
 export type Transaction = {
   id: string;
@@ -8,20 +8,26 @@ export type Transaction = {
   timestamp: number;
 };
 
-const TransactionList = ({ transactions }: { transactions: Transaction[] }) => {
+// Static initial transactions (4 most significant trades)
+const INITIAL_TRANSACTIONS: Transaction[] = [
+  { id: "1", amount: 10.5, type: "buy", timestamp: Date.now() },
+  { id: "2", amount: 7.8, type: "buy", timestamp: Date.now() },
+  { id: "3", amount: 5.2, type: "buy", timestamp: Date.now() },
+  { id: "4", amount: 3.6, type: "buy", timestamp: Date.now() },
+];
+
+const TransactionList = React.memo(({ transactions }: { transactions: Transaction[] }) => {
   return (
     <div className="z-[9999]">
       <div className="bg-gradient-to-br from-[#43e97b] to-[#38f9d7] p-1 rounded-2xl shadow-xl">
-        <div className="bg-zinc-900/90 backdrop-blur-lg rounded-xl p-4 space-y-3 min-w-[80px]">
-          <h3 className="text-[#43e97b] font-semibold text-lg mb-2">
-            Tokens
-          </h3>
+        <div className="bg-zinc-900/90 backdrop-blur-lg rounded-xl p-3 space-y-3 min-w-[110px]">
+          <h3 className="text-[#43e97b] font-semibold text-base mb-2">Tokens</h3>
           {transactions.map((transaction) => (
             <div
               key={transaction.id}
               className="flex items-center justify-between text-sm"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 text-xs w-full">
                 <div className="h-2 w-2 rounded-full bg-[#43e97b]" />
                 <span className="text-zinc-200">
                   +{transaction.amount.toFixed(2)} SOL
@@ -33,7 +39,9 @@ const TransactionList = ({ transactions }: { transactions: Transaction[] }) => {
       </div>
     </div>
   );
-};
+});
+
+TransactionList.displayName = "TransactionList"; // Add display name for React.memo
 
 const generateDummyTransaction = (): Transaction => {
   return {
@@ -45,30 +53,32 @@ const generateDummyTransaction = (): Transaction => {
 };
 
 export default function TransactionIndicator() {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [transactions, setTransactions] = useState<Transaction[]>(INITIAL_TRANSACTIONS);
 
   const handleNewTransaction = useCallback((transaction: Transaction) => {
     setTransactions((prev) => {
-      // Keep only the last 4 positive transactions
-      const newTransactions = [...prev, transaction]
-        .filter(t => t.type === "buy")
-        .slice(-4);
+      // Keep only the last 4 transactions
+      const newTransactions = [...prev, transaction].slice(-4);
       return newTransactions;
     });
   }, []);
 
+  // Simulate real-time updates
   useEffect(() => {
     const interval = setInterval(() => {
       const newTransaction = generateDummyTransaction();
       handleNewTransaction(newTransaction);
-    }, 3000);
+    }, 5000); // Update every 5 seconds
 
     return () => clearInterval(interval);
   }, [handleNewTransaction]);
 
+  // Memoize the transactions list to prevent unnecessary re-renders
+  const memoizedTransactions = useMemo(() => transactions, [transactions]);
+
   return (
     <div className="pointer-events-none z-[9999]">
-      {transactions.length > 0 && <TransactionList transactions={transactions} />}
+      <TransactionList transactions={memoizedTransactions} />
     </div>
   );
 }

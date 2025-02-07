@@ -30,7 +30,7 @@ export default function HeroSection() {
       {/* Light noise texture */}
       <div className="absolute inset-0 opacity-[0.015] bg-[url('/noise.png')] mix-blend-overlay" />
 
-      <div className="relative z-10 flex flex-col lg:flex-row justify-between px-8 py-16 sm:px-16 md:px-24 items-center">
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between px-8 py-16 sm:px-16 md:px-20 items-center">
         <div className="flex flex-col space-y-8 max-w-2xl justify-center text-center">
           <div className="text-white mx-auto justify-center pt-5 space-y-4">
             <motion.h1
@@ -93,8 +93,8 @@ export default function HeroSection() {
             <Image
               src="/godz_transparent.png"
               alt="$GODZ"
-              width={400} // Define width
-              height={400} // Define height to match original behavior
+              width={450} // Define width
+              height={450} // Define height to match original behavior
               className="relative z-10 drop-shadow-2xl"
             />
           </motion.div>

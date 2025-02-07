@@ -55,14 +55,14 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 place-contento">
           {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-zinc-900/50 backdrop-blur-lg rounded-2xl p-8 border border-[#43e97b]/20 hover:border-[#43e97b]/40 transition-all duration-300"
+              className="bg-zinc-900/50 backdrop-blur-lg rounded-2xl p-8 border border-[#43e97b]/20 hover:border-[#43e97b]/40 transition-all duration-300 w-3/4"
             >
               <div className="flex items-start gap-6">
                 <div className="p-3 bg-zinc-800/50 rounded-xl">

@@ -85,7 +85,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-[#43e97b] transition-colors"
               >
-                <FaTwitter className="h-6 w-6" /> {/* Twitter icon */}
+                <FaTwitter className="h-6 w-6" /> Twitter <br /> {/* Twitter icon */}
               </Link>
               <Link
                 href="https://t.me/GodzOnSol"
@@ -93,7 +93,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-[#43e97b] transition-colors"
               >
-                <FaTelegramPlane className="h-6 w-6" /> {/* Telegram icon */}
+                <FaTelegramPlane className="h-6 w-6" /> Telegram{/* Telegram icon */}
               </Link>
             </div>
           </div>
