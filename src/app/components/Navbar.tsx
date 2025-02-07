@@ -11,15 +11,34 @@ interface NavLinkProps {
   onClick?: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick }) => (
-  <Link
-    href={href}
-    className="text-white hover:text-[#43e97b] transition-colors"
-    onClick={onClick}
-  >
-    {children}
-  </Link>
-);
+const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault(); // Prevent default link behavior
+
+    const target = document.querySelector(href);
+    if (target) {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - 80, // Adjust offset for navbar height
+        behavior: "smooth",
+      });
+    }
+
+    if (onClick) {
+      onClick(); // Close mobile menu when a link is clicked
+    }
+  };
+
+  return (
+    <a
+      href={href}
+      className="text-white hover:text-[#43e97b] transition-colors"
+      onClick={handleClick}
+    >
+      {children}
+    </a>
+  );
+};
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
