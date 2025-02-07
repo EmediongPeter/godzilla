@@ -59,7 +59,7 @@ export default function HeroSection() {
                 Launch Coming Soon
               </motion.button>
               <Link
-                href="/https://godz-godzicoin.gitbook.io/godzicoin-usdgodz-litepaper"
+                href="https://godz-godzicoin.gitbook.io/godzicoin-usdgodz-litepaper"
                 target="_blank"
                 rel="noopener noreferrer"
               >
