@@ -18,12 +18,12 @@ const AboutSection = () => {
       description:
         "Stake your $GODZ and earn while you hold. Our innovative staking system rewards the true believers with juicy yields.",
     },
-    {
-      icon: <Coins className="w-8 h-8 text-[#43e97b]" />,
-      title: "Revolutionary Tokenomics",
-      description:
-        "Precisely engineered with 70% for the community, built for sustainable growth and long-term value creation.",
-    },
+    // {
+    //   icon: <Coins className="w-8 h-8 text-[#43e97b]" />,
+    //   title: "Revolutionary Tokenomics",
+    //   description:
+    //     "Precisely engineered with 70% for the community, built for sustainable growth and long-term value creation.",
+    // },
     {
       icon: <Rocket className="w-8 h-8 text-[#43e97b]" />,
       title: "Unlimited Potential",
@@ -57,7 +57,7 @@ const AboutSection = () => {
 
         {/* Feature Grid */}
         <div className="flex justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 w-full max-w-5xl px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 w-full max-w-5xl px-4">
             {features.map((feature, index) => (
               <motion.div
                 key={index}

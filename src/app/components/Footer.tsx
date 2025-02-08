@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaTwitter, FaTelegramPlane } from "react-icons/fa"; // Import icons
 
 export default function Footer() {
+  // MAKE THE TOKEN INDICATOR A FLOATING ELEMENT RATHER THAN A BLOCK ELEMENT ON THE WEBSITE. IT SHOULD BE RELATIVELY STACKED
   return (
     <footer className="relative bg-gradient-to-b from-black via-zinc-950 to-black overflow-hidden border-t border-[#43e97b]/20">
       {/* Gradient overlay */}
