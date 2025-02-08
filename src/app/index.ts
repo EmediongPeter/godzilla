@@ -2,7 +2,7 @@ export const metadata = {
     title: "Godzicoin ($GODZ) - The Cutest Baby Godzilla on Solana | Meme & Utility Token",
     description: "Godzicoin ($GODZ) isn’t just a token—it’s the cutest, most degen-friendly baby in the Solana ecosystem. Built for meme lords, alphas, and Web3 chads, $GODZ blends top-tier meme culture with real utility, staking rewards, and community governance. Join the cutest movement on Solana!",
     keywords: [
-      "Godzicoin",
+      "Godzicoin", 
       "$GODZ",
       "Solana memecoin",
       "Web3 memes",
