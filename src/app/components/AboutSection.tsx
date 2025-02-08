@@ -1,7 +1,7 @@
 import React from "react";
 // import { motion } from 'framer-motion';
 import * as motion from "motion/react-client";
-import { Rocket, Shield, Users, Coins } from "lucide-react";
+import { Rocket, Shield, Users } from "lucide-react";
 import Link from "next/link";
 
 const AboutSection = () => {
